@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabulous Kundan Saidutty Makan Safvan Gay 🏳‍🌈 Pride Game</title>
+    <style>
+        :root {
+            --rainbow-1: #ff0018;
+            --rainbow-2: #ffa52c;
+            --rainbow-3: #ffff41;
+            --rainbow-4: #008018;
+            --rainbow-5: #0000f9;
+            --rainbow-6: #86007d;
+        }
+        
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: #000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        
+        .pride-flag {
+            height: 30px;
+            width: 100%;
+            background: linear-gradient(
+                to right,
+                var(--rainbow-1),
+                var(--rainbow-2),
+                var(--rainbow-3),
+                var(--rainbow-4),
+                var(--rainbow-5),
+                var(--rainbow-6)
+            );
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            animation: flagWave 5s ease-in-out infinite alternate;
+        }
+        
+        .game-container {
+            max-width: 800px;
+            margin: 60px auto 20px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            background: linear-gradient(
+                45deg,
+                var(--rainbow-1),
+                var(--rainbow-2),
+                var(--rainbow-3),
+                var(--rainbow-4),
+                var(--rainbow-5),
+                var(--rainbow-6)
+            );
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: rainbow 8s ease infinite;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        
+        .drag-queen {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: discoGlow 1.5s infinite alternate;
+            text-transform: uppercase;
+        }
+        
+        .game-area {
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .pride-button {
+            background: linear-gradient(45deg, #ff00cc, #3333ff);
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            margin: 15px;
+            font-size: 1.5em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 0, 204, 0.4);
+            position: relative;
+            overflow: hidden;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .pride-button:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(51, 51, 255, 0.6);
+        }
+        
+        .pride-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                transparent,
+                transparent,
+                transparent,
+                rgba(255, 255, 255, 0.3)
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
+        .disco-ball {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(
+                circle at 30% 30%,
+                #fff 0%,
+                #aaa 10%,
+                #666 20%,
+                #333 30%,
+                #000 100%
+            );
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+            box-shadow: 0 0 30px #fff;
+            animation: spin 10s linear infinite;
+        }
+        
+        .disco-light {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                circle at var(--x) var(--y),
+                rgba(255, 0, 0, 0.2) 0%,
+                rgba(0, 255, 0, 0.2) 33%,
+                rgba(0, 0, 255, 0.2) 66%,
+                transparent 80%
+            );
+            pointer-events: none;
+            z-index: -1;
+            animation: colorChange 10s infinite alternate;
+        }
+        
+        @keyframes rainbow {
+            0% { background-position: 0% 50% }
+            50% { background-position: 100% 50% }
+            100% { background-position: 0% 50% }
+        }
+        
+        @keyframes discoGlow {
+            0% { text-shadow: 0 0 10px var(--rainbow-1); color: var(--rainbow-1); }
+            20% { text-shadow: 0 0 15px var(--rainbow-2); color: var(--rainbow-2); }
+            40% { text-shadow: 0 0 15px var(--rainbow-3); color: var(--rainbow-3); }
+            60% { text-shadow: 0 0 15px var(--rainbow-4); color: var(--rainbow-4); }
+            80% { text-shadow: 0 0 15px var(--rainbow-5); color: var(--rainbow-5); }
+            100% { text-shadow: 0 0 20px var(--rainbow-6); color: var(--rainbow-6); }
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes shine {
+            to {
+                transform: rotate(30deg) translate(100%, 100%);
+            }
+        }
+        
+        @keyframes flagWave {
+            0% { transform: skewY(-2deg); }
+            100% { transform: skewY(2deg); }
+        }
+        
+        @keyframes colorChange {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .drag-queen {
+                font-size: 1.5em;
+            }
+            .pride-button {
+                padding: 15px 30px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pride-flag"></div>
+    
+    <div class="disco-light" id="discoLight"></div>
+    
+    <div class="game-container">
+        <div class="disco-ball"></div>
+        
+        <h1>Pollachi Pride</h1>
+        
+        <div class="drag-queen">
+            Starring: Kundan Saidutty Makan Safvan Gay
+        </div>
+        
+        <div class="game-area">
+            <p style="color: #fff; font-size: 1.3em;">Who slays the hardest in Pollachi?</p>
+            
+            <button class="pride-button" onclick="correctAnswer()">
+                👑 Saidalavi 👑
+            </button>
+            
+            <button class="pride-button" onclick="wrongAnswer()">
+                💅 Other Queens 💅
+            </button>
+        </div>
+    </div>
+    
+    <audio id="discoSound" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Disco light follows mouse
+        document.addEventListener('mousemove', (e) => {
+            const light = document.getElementById('discoLight');
+            light.style.setProperty('--x', e.clientX + 'px');
+            light.style.setProperty('--y', e.clientY + 'px');
+        });
+        
+        // Play disco sound
+        const discoSound = document.getElementById('discoSound');
+        document.body.addEventListener('click', () => {
+            discoSound.play().catch(e => console.log("Audio play failed:", e));
+        });
+        
+        // Confetti function
+        function createConfetti() {
+            const colors = [
+                '#ff0000', '#ff8000', '#ffff00', 
+                '#00ff00', '#0000ff', '#8000ff'
+            ];
+            
+            for (let i = 0; i < 200; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = Math.random() * 15 + 5 + 'px';
+                confetti.style.height = Math.random() * 15 + 5 + 'px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-20px';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                confetti.style.opacity = Math.random() + 0.5;
+                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                const animation = confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                
+                document.body.appendChild(confetti);
+                
+                // Create keyframes dynamically
+                const keyframes = `
+                    @keyframes fall {
+                        to {
+                            transform: translateY(100vh) rotate(${Math.random() * 720}deg);
+                            left: ${Math.random() * 100}vw;
+                            opacity: 0;
+                        }
+                    }
+                `;
+                
+                const styleEl = document.createElement('style');
+                styleEl.innerHTML = keyframes;
+                document.head.appendChild(styleEl);
+                
+                // Remove confetti after animation
+                setTimeout(() => {
+                    confetti.remove();
+                    styleEl.remove();
+                }, 5000);
+            }
+        }
+        
+        function correctAnswer() {
+            createConfetti();
+            discoSound.play().catch(e => console.log(e));
+            
+            // Change title temporarily
+            const originalTitle = document.querySelector('h1').innerText;
+            document.querySelector('h1').innerText = "YASSS QUEEN!";
+            
+            setTimeout(() => {
+                document.querySelector('h1').innerText = originalTitle;
+            }, 2000);
+            
+            alert("💖 Correct! Saidalavi is the ultimate diva! 💖");
+        }
+        
+        function wrongAnswer() {
+            alert("🚨 Wrong choice, darling! Try again! 🚨");
+        }
+    </script>
+</body>
+</html>
