@@ -10,282 +10,322 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
-            background: #f8f9fa;
+            line-height: 1.6;
         }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content h1 {
+            color: #e91e63;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .rainbow-bar {
+            height: 5px;
+            background: linear-gradient(90deg, 
+                #ff0018 0%, 
+                #ffa52c 20%, 
+                #ffff41 40%, 
+                #008018 60%, 
+                #0000f9 80%, 
+                #86007d 100%);
+            margin: 1rem 0;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 2rem;
         }
 
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, #8a2be2 0%, #ff69b4 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .header-content h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .header-content .subtitle {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            font-weight: 300;
-        }
-        .rainbow-bar {
-            height: 6px;
-            background: linear-gradient(90deg, 
-                #ff0018 0%, #ffa52c 20%, #ffff41 40%, 
-                #008018 60%, #0000f9 80%, #86007d 100%);
-            margin: 1rem auto;
-            max-width: 800px;
-            border-radius: 3px;
-        }
-
-        /* Photo Gallery */
         .photo-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            padding: 3rem 0;
+            margin: 2rem 0;
         }
+
         .photo-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
         }
+
         .photo-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+            transform: translateY(-10px);
         }
-        .photo-img {
+
+        .photo-card img {
             width: 100%;
-            height: 260px;
+            height: 300px;
             object-fit: cover;
-            display: block;
-            border-bottom: 3px solid #8a2be2;
+            border-bottom: 3px solid #e91e63;
         }
+
         .photo-content {
             padding: 1.5rem;
         }
-        .photo-content h3 {
-            color: #8a2be2;
-            margin-bottom: 0.8rem;
-            font-size: 1.4rem;
-        }
-        .photo-content p {
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
 
-        /* History Section */
-        .history-section {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-        }
-        .history-section h2 {
-            text-align: center;
-            color: #8a2be2;
-            font-size: 2.3rem;
-            margin-bottom: 2.5rem;
-        }
-        .history-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.8rem;
-        }
-        .history-card {
-            background: #f8f9fa;
-            padding: 1.8rem;
-            border-radius: 10px;
-            border-left: 5px solid #ff69b4;
-        }
-        .history-card h3 {
-            color: #8a2be2;
+        .photo-content h3 {
+            color: #e91e63;
             margin-bottom: 1rem;
             font-size: 1.3rem;
         }
-        .history-card p {
-            color: #555;
+
+        .photo-content p {
+            color: #666;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
-        /* Footer */
-        footer {
-            background: #2d2d2d;
-            color: white;
-            text-align: center;
-            padding: 2.5rem 0;
-            margin-top: 3rem;
-        }
-        .footer-content h3 {
-            margin-bottom: 1rem;
-            color: #ff69b4;
-        }
-        .pride-flag {
-            height: 8px;
-            background: linear-gradient(90deg, 
-                #ff0018 0%, #ffa52c 20%, #ffff41 40%, 
-                #008018 60%, #0000f9 80%, #86007d 100%);
-            border-radius: 4px;
-            margin: 1.5rem auto;
-            max-width: 600px;
+        .history-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* Responsive Design */
+        .history-section h2 {
+            color: #e91e63;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .history-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .history-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #e91e63;
+        }
+
+        .history-card h3 {
+            color: #e91e63;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
         @media (max-width: 768px) {
-            .header-content h1 { font-size: 2.2rem; }
-            .header-content .subtitle { font-size: 1.1rem; }
-            .photo-gallery { grid-template-columns: 1fr; gap: 1.5rem; }
-            .history-section { padding: 2rem 1.5rem; }
-            .history-grid { grid-template-columns: 1fr; }
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pride-flag {
+            background: linear-gradient(180deg, 
+                #ff0018 0%, 
+                #ffa52c 20%, 
+                #ffff41 40%, 
+                #008018 60%, 
+                #0000f9 80%, 
+                #86007d 100%);
+            height: 8px;
+            border-radius: 4px;
+            margin: 1rem 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>SFVAN GAY</h1>
-                <div class="subtitle">The First Transgender of Wayanad</div>
-                <div class="rainbow-bar"></div>
-            </div>
+        <div class="header-content">
+            <h1>SFVAN GAY</h1>
+            <div class="subtitle">The First Transgender of Wayanad</div>
+            <div class="rainbow-bar"></div>
         </div>
     </header>
 
-    <main class="container">
+    <div class="container">
         <section class="photo-gallery">
+            <!-- Photo 1 -->
             <div class="photo-card">
-                <img src="https://ibb.co/DPdVMMVX" alt="SFVAN GAY - Pride and Identity" class="photo-img" loading="lazy">
+                <img src="https://ibb.co/DPdVMMVX" alt="SFVAN GAY - Pride and Identity" onerror="this.src='https://via.placeholder.com/400x300/667eea/ffffff?text=SFVAN+GAY+Image'">
                 <div class="photo-content">
                     <h3>Embracing True Identity</h3>
                     <p>SFVAN GAY represents the courage to live authentically in a society that often misunderstands transgender identities. Their journey symbolizes the universal LGBTQ+ struggle for self-acceptance and the right to express one's true gender identity without fear or shame.</p>
                 </div>
             </div>
 
+            <!-- Photo 2 -->
             <div class="photo-card">
-                <img src="https://ibb.co/Y70w1Cwv" alt="Transgender Resilience" class="photo-img" loading="lazy">
+                <img src="https://ibb.co/Y70w1Cwv" alt="Transgender Resilience" onerror="this.src='https://via.placeholder.com/400x300/764ba2/ffffff?text=Transgender+Resilience'">
                 <div class="photo-content">
                     <h3>Transgender Resilience</h3>
                     <p>The transgender community has historically faced immense challenges, from legal discrimination to social stigma. SFVAN GAY's presence in Wayanad marks a significant step toward visibility and acceptance for gender-diverse individuals in traditional societies.</p>
                 </div>
             </div>
 
+            <!-- Photo 3 -->
             <div class="photo-card">
-                <img src="https://ibb.co/PsThgjWY" alt="LGBTQ+ Community Strength" class="photo-img" loading="lazy">
+                <img src="https://ibb.co/PsThgjWY" alt="LGBTQ+ Community Strength" onerror="this.src='https://via.placeholder.com/400x300/e91e63/ffffff?text=LGBTQ+Community'">
                 <div class="photo-content">
                     <h3>Community Strength</h3>
                     <p>Gay and transgender individuals have always existed across cultures, often serving as spiritual leaders and cultural custodians. SFVAN GAY continues this legacy, reminding us that diversity in gender and sexuality is a natural part of human experience.</p>
                 </div>
             </div>
 
+            <!-- Photo 4 -->
             <div class="photo-card">
-                <img src="https://ibb.co/M5hKzdky" alt="Gender Expression Freedom" class="photo-img" loading="lazy">
+                <img src="https://ibb.co/M5hKzdky" alt="Gender Expression Freedom" onerror="this.src='https://via.placeholder.com/400x300/ff6b6b/ffffff?text=Gender+Freedom'">
                 <div class="photo-content">
                     <h3>Freedom of Expression</h3>
                     <p>The right to express one's gender identity is fundamental to human dignity. SFVAN GAY's journey highlights the importance of creating safe spaces where LGBTQ+ individuals can express themselves without judgment or violence.</p>
                 </div>
             </div>
 
+            <!-- Photo 5 -->
             <div class="photo-card">
-                <img src="https://ibb.co/hJLwF9xQ" alt="Cultural Acceptance" class="photo-img" loading="lazy">
+                <img src="https://ibb.co/hJLwF9xQ" alt="Cultural Acceptance" onerror="this.src='https://via.placeholder.com/400x300/4ecdc4/ffffff?text=Cultural+Acceptance'">
                 <div class="photo-content">
                     <h3>Cultural Transformation</h3>
                     <p>Throughout history, many cultures recognized third genders and diverse sexual orientations. SFVAN GAY's visibility helps reclaim this heritage and challenges modern binary thinking about gender and sexuality.</p>
                 </div>
             </div>
 
+            <!-- Photo 6 -->
             <div class="photo-card">
-                <img src="https://ibb.co/BMTqQCP" alt="Love and Equality" class="photo-img" loading="lazy">
+                <img src="https://ibb.co/BMTqQCP" alt="Love and Equality" onerror="this.src='https://via.placeholder.com/400x300/45b7d1/ffffff?text=Love+is+Love'">
                 <div class="photo-content">
                     <h3>Love Without Boundaries</h3>
                     <p>The gay rights movement has always been about the fundamental right to love who you love. SFVAN GAY embodies this principle, demonstrating that transgender and gay individuals deserve equal rights to love, family, and community acceptance.</p>
+                </div>
+            </div>
+
+            <!-- Photo 7 -->
+            <div class="photo-card">
+                <img src="https://ibb.co/LX4CNwYt" alt="Transgender History" onerror="this.src='https://via.placeholder.com/400x300/96ceb4/ffffff?text=Trans+History'">
+                <div class="photo-content">
+                    <h3>Historical Significance</h3>
+                    <p>Transgender people have been part of human civilization for millennia, from ancient Roman emperors to Indian hijras. SFVAN GAY continues this rich history, bringing transgender visibility to Wayanad and inspiring future generations.</p>
+                </div>
+            </div>
+
+            <!-- Photo 8 -->
+            <div class="photo-card">
+                <img src="https://ibb.co/ZzL3pFf0" alt="LGBTQ+ Rights" onerror="this.src='https://via.placeholder.com/400x300/feca57/ffffff?text=LGBTQ+Rights'">
+                <div class="photo-content">
+                    <h3>Fighting for Rights</h3>
+                    <p>The struggle for LGBTQ+ rights continues worldwide. SFVAN GAY represents the ongoing battle for legal recognition, healthcare access, and protection from discrimination that transgender and gay individuals face daily.</p>
+                </div>
+            </div>
+
+            <!-- Photo 9 -->
+            <div class="photo-card">
+                <img src="https://ibb.co/zWqmtfr2" alt="Pride and Celebration" onerror="this.src='https://via.placeholder.com/400x300/ff9ff3/ffffff?text=Pride+Celebration'">
+                <div class="photo-content">
+                    <h3>Celebrating Diversity</h3>
+                    <p>Pride is both a celebration and a protest. SFVAN GAY's presence celebrates the diversity of human gender and sexuality while protesting the discrimination that still affects LGBTQ+ communities globally.</p>
                 </div>
             </div>
         </section>
 
         <section class="history-section">
             <h2>Transgender & Gay History</h2>
-            <div class="history-grid">
+            <div class="history-content">
                 <div class="history-card">
                     <h3>Ancient Recognition</h3>
                     <p>Many ancient civilizations including India, Greece, and Native American cultures recognized third genders and same-sex relationships as natural variations of human experience.</p>
                 </div>
+                
                 <div class="history-card">
                     <h3>Modern Movement</h3>
                     <p>The modern LGBTQ+ rights movement began with events like the Stonewall riots in 1969, where transgender women of color were at the forefront of the struggle for equality.</p>
                 </div>
+                
                 <div class="history-card">
                     <h3>Legal Progress</h3>
                     <p>Recent decades have seen significant legal victories including marriage equality, anti-discrimination laws, and legal recognition of transgender identities in many countries.</p>
                 </div>
+                
                 <div class="history-card">
                     <h3>Ongoing Challenges</h3>
                     <p>Despite progress, LGBTQ+ individuals still face violence, discrimination, and legal challenges in many parts of the world, highlighting the continued need for advocacy and education.</p>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <h3>SFVAN GAY - The First Transgender of Wayanad</h3>
-                <div class="pride-flag"></div>
-                <p>Celebrating Diversity • Honoring Courage • Building Inclusive Communities</p>
-                <p style="margin-top: 1.5rem; opacity: 0.8;">&copy; 2024 SFVAN GAY. All rights reserved.</p>
+        <div class="footer-content">
+            <h3>SFVAN GAY - The First Transgender of Wayanad</h3>
+            <div class="pride-flag"></div>
+            <p>Celebrating Diversity • Honoring Courage • Building Inclusive Communities</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
             </div>
+            <p>&copy; 2024 SFVAN GAY. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Image error handling and lazy loading enhancement
+        // Simple image error handling
         document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            
-            // Set up error handling for images
+            const images = document.querySelectorAll('img');
             images.forEach(img => {
                 img.addEventListener('error', function() {
-                    // If image fails to load, replace with a placeholder
-                    this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNGVEFOIEdBWTwvdGV4dD48L3N2Zz4=';
-                    this.alt = 'SFVAN GAY - Image loading failed';
+                    this.src = 'https://via.placeholder.com/400x300/667eea/ffffff?text=SFVAN+GAY';
+                    this.alt = 'SFVAN GAY - Transgender Pioneer';
                 });
             });
-
-            // Simple intersection observer for lazy loading (fallback for browsers that don't support native lazy loading)
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
-                        }
-                    });
-                });
-
-                images.forEach(img => {
-                    if (img.complete && img.naturalHeight !== 0) {
-                        return; // Skip if image is already loaded
-                    }
-                    imageObserver.observe(img);
-                });
-            }
         });
     </script>
 </body>
