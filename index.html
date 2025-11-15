@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabulous Saidutty Makan Gay Safuwan Pride Extravaganza! 🏳️‍🌈</title>
+    <title>Fabulous Saidutty Makan Safvan Gay Pride Extravaganza! 🏳️‍🌈</title>
     <style>
         :root {
             --rainbow-1: #ff0018;
@@ -44,7 +44,7 @@
         }
         
         .game-container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 80px auto 40px;
             padding: 40px;
             background: rgba(0, 0, 0, 0.7);
@@ -254,6 +254,41 @@
             animation: pulse 2s infinite;
         }
         
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 2px solid #ff00ff;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            animation: borderPulse 3s infinite;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.05);
+            border-color: #ff00ff;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+        
+        .gallery-title {
+            color: white;
+            font-size: 2.5em;
+            margin: 30px 0 10px;
+            text-shadow: 0 0 10px #ff00ff;
+            animation: discoGlow 1.5s infinite alternate;
+        }
+        
         @keyframes rainbow {
             0% { background-position: 0% 50% }
             50% { background-position: 100% 50% }
@@ -354,6 +389,9 @@
             .question {
                 font-size: 1.4em;
             }
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
@@ -383,6 +421,20 @@
         <div id="gameContent">
             <!-- Questions will be loaded here -->
         </div>
+        
+        <h2 class="gallery-title">Fabulous Safvan Gay Gallery</h2>
+        <div class="image-gallery">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 1" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 2" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 3" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 4" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 5" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 6" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 7" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 8" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 9" class="gallery-image">
+            <img src="https://i.ibb.co/4gtrWnqD/image.jpg" alt="Safvan Gay 10" class="gallery-image">
+        </div>
     </div>
     
     <audio id="discoSound" loop>
@@ -401,7 +453,7 @@
             {
                 question: "Who is the ultimate gay icon in world?",
                 options: [
-                    "Saidalavi and Safvan Gay",
+                    "Safvan Gay and Safvan Gay",
                     "safvan gay",
                     "Local Aunty",
                     "The Coconut Seller"
@@ -414,7 +466,7 @@
                 options: [
                     "Rainbow feather boa",
                     " mazhavil underwear 🏳‍🌈",
-                    " saidalavi shirt 🏳‍🌈!",
+                    " Safvan Gay shirt 🏳‍🌈!",
                     "A giant pride flag cape"
                 ],
                 correct: 1,
@@ -622,7 +674,7 @@
             
             let message;
             if (percentage === 100) {
-                message = "🏆 FLAWLESS VICTORY! You're the ultimate Saidutty expert! ��";
+                message = "🏆 FLAWLESS VICTORY! You're the ultimate Saidutty expert! 💖";
             } else if (percentage >= 80) {
                 message = "✨ FABULOUS! You know your Saidutty trivia! ✨";
             } else if (percentage >= 50) {
