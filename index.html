@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SFVAN GAY - The First Transgender of Wayanad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -11,49 +12,157 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --rainbow-red: #FF0018;
+            --rainbow-orange: #FFA52C;
+            --rainbow-yellow: #FFFF41;
+            --rainbow-green: #008018;
+            --rainbow-blue: #0000F9;
+            --rainbow-purple: #86007D;
+            --trans-blue: #5BCEFA;
+            --trans-pink: #F5A9B8;
+            --trans-white: #FFFFFF;
+            --progress-red: #E40303;
+            --progress-orange: #FF8C00;
+            --progress-yellow: #FFED00;
+            --progress-green: #008026;
+            --progress-blue: #24408E;
+            --progress-purple: #732982;
+            --bi-pink: #D60270;
+            --bi-purple: #9B4F96;
+            --bi-blue: #0038A8;
+            --pan-pink: #FF218C;
+            --pan-yellow: #FFD800;
+            --pan-blue: #21B1FF;
+            --nonbinary-yellow: #FFF430;
+            --nonbinary-white: #FFFFFF;
+            --nonbinary-purple: #9C59D1;
+            --nonbinary-black: #2C2C2C;
+            --ace-purple: #A3A3A3;
+            --ace-white: #FFFFFF;
+            --ace-black: #000000;
+            --ace-gray: #C4C4C4;
+            --lesbian-red: #D62900;
+            --lesbian-orange: #FF9B55;
+            --lesbian-white: #FFFFFF;
+            --lesbian-pink: #D462A6;
+            --lesbury-purple: #A20161;
+            --genderqueer-purple: #B57FDD;
+            --genderqueer-white: #FFFFFF;
+            --genderqueer-green: #498022;
+            --intersex-yellow: #FFD800;
+            --intersex-purple: #7902AA;
+        }
+
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8a2be2 0%, #ff69b4 100%);
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         header {
             background: rgba(255, 255, 255, 0.95);
             padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
         }
 
         .header-content h1 {
             color: #e91e63;
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .header-content .subtitle {
             color: #666;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-text {
+            color: #8a2be2;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .rainbow-bar {
-            height: 5px;
+            height: 6px;
             background: linear-gradient(90deg, 
-                #ff0018 0%, 
-                #ffa52c 20%, 
-                #ffff41 40%, 
-                #008018 60%, 
-                #0000f9 80%, 
-                #86007d 100%);
-            margin: 1rem 0;
+                var(--rainbow-red) 0%, 
+                var(--rainbow-orange) 20%, 
+                var(--rainbow-yellow) 40%, 
+                var(--rainbow-green) 60%, 
+                var(--rainbow-blue) 80%, 
+                var(--rainbow-purple) 100%);
+            margin: 1rem auto;
+            max-width: 800px;
+            border-radius: 3px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+        }
+
+        .flags-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .flags-section h2 {
+            color: #e91e63;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+        }
+
+        .flags-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .flag-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.2rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .flag-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .flag-stripes {
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .flag-item h3 {
+            color: #8a2be2;
+            margin-bottom: 0.5rem;
+        }
+
+        .flag-item p {
+            color: #666;
+            font-size: 0.9rem;
         }
 
         .photo-gallery {
@@ -80,6 +189,7 @@
             height: 300px;
             object-fit: cover;
             border-bottom: 3px solid #e91e63;
+            display: block;
         }
 
         .photo-content {
@@ -131,11 +241,94 @@
             margin-bottom: 1rem;
         }
 
+        .leader-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .leader-section h2 {
+            color: #e91e63;
+            margin-bottom: 1.5rem;
+            font-size: 2.3rem;
+        }
+
+        .leader-section p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #8a2be2;
+            font-size: 1.3rem;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid #ff69b4;
+            background: #f8f9fa;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .mission-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .mission-section h2 {
+            color: #e91e63;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.3rem;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .mission-card {
+            background: #f8f9fa;
+            padding: 1.8rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .mission-card i {
+            font-size: 2.5rem;
+            color: #8a2be2;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card h3 {
+            color: #e91e63;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
         footer {
             background: rgba(0, 0, 0, 0.9);
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 2.5rem 0;
             margin-top: 3rem;
         }
 
@@ -145,19 +338,42 @@
         }
 
         .social-links {
-            margin: 1rem 0;
+            margin: 1.5rem 0;
         }
 
         .social-links a {
             color: white;
             margin: 0 1rem;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff69b4;
+        }
+
+        .pride-flag {
+            background: linear-gradient(90deg, 
+                var(--rainbow-red) 0%, 
+                var(--rainbow-orange) 20%, 
+                var(--rainbow-yellow) 40%, 
+                var(--rainbow-green) 60%, 
+                var(--rainbow-blue) 80%, 
+                var(--rainbow-purple) 100%);
+            height: 8px;
+            border-radius: 4px;
+            margin: 1.5rem auto;
+            max-width: 600px;
         }
 
         @media (max-width: 768px) {
             .header-content h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            
+            .leader-text {
+                font-size: 1.2rem;
             }
             
             .container {
@@ -167,19 +383,67 @@
             .photo-gallery {
                 grid-template-columns: 1fr;
             }
+            
+            .flags-grid, .mission-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .history-section, .leader-section, .mission-section {
+                padding: 2rem 1.5rem;
+            }
         }
 
-        .pride-flag {
-            background: linear-gradient(180deg, 
-                #ff0018 0%, 
-                #ffa52c 20%, 
-                #ffff41 40%, 
-                #008018 60%, 
-                #0000f9 80%, 
-                #86007d 100%);
-            height: 8px;
-            border-radius: 4px;
-            margin: 1rem 0;
+        .floating-heart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #ff69b4;
+            animation: float 3s ease-in-out infinite;
+            z-index: 100;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .parade-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .parade-section h2 {
+            color: #e91e63;
+            margin-bottom: 2rem;
+            font-size: 2.3rem;
+        }
+
+        .parade-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .parade-flag {
+            width: 80px;
+            height: 120px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            animation: wave 3s infinite ease-in-out;
+            animation-delay: calc(var(--i) * 0.2s);
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
         }
     </style>
 </head>
@@ -188,15 +452,214 @@
         <div class="header-content">
             <h1>SFVAN GAY</h1>
             <div class="subtitle">The First Transgender of Wayanad</div>
+            <div class="leader-text">THE UPCOMING LGBTQ LEADER WAYANAD TRANSGENDER SFVAN GAY</div>
             <div class="rainbow-bar"></div>
         </div>
     </header>
 
     <div class="container">
+        <section class="flags-section">
+            <h2>LGBTQ+ Flags and Their Meanings</h2>
+            <div class="flags-grid">
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(90deg, 
+                        var(--rainbow-red) 0%, 
+                        var(--rainbow-orange) 20%, 
+                        var(--rainbow-yellow) 40%, 
+                        var(--rainbow-green) 60%, 
+                        var(--rainbow-blue) 80%, 
+                        var(--rainbow-purple) 100%);"></div>
+                    <h3>Rainbow Flag</h3>
+                    <p>Represents the diversity of the LGBTQ+ community. Originally designed with 8 colors, now commonly displayed with 6.</p>
+                </div>
+                
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--trans-blue) 0%, 
+                        var(--trans-blue) 20%, 
+                        var(--trans-pink) 20%, 
+                        var(--trans-pink) 40%, 
+                        var(--trans-white) 40%, 
+                        var(--trans-white) 60%, 
+                        var(--trans-pink) 60%, 
+                        var(--trans-pink) 80%, 
+                        var(--trans-blue) 80%, 
+                        var(--trans-blue) 100%);"></div>
+                    <h3>Transgender Flag</h3>
+                    <p>Designed by Monica Helms in 1999. Blue for boys, pink for girls, and white for those transitioning or non-binary.</p>
+                </div>
+                
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--progress-red) 0%, 
+                        var(--progress-red) 16.66%, 
+                        var(--progress-orange) 16.66%, 
+                        var(--progress-orange) 33.33%, 
+                        var(--progress-yellow) 33.33%, 
+                        var(--progress-yellow) 50%, 
+                        var(--progress-green) 50%, 
+                        var(--progress-green) 66.66%, 
+                        var(--progress-blue) 66.66%, 
+                        var(--progress-blue) 83.33%, 
+                        var(--progress-purple) 83.33%, 
+                        var(--progress-purple) 100%);"></div>
+                    <h3>Progress Pride Flag</h3>
+                    <p>Adds arrow-shaped stripes representing transgender people and LGBTQ+ people of color to the traditional rainbow flag.</p>
+                </div>
+                
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--bi-pink) 0%, 
+                        var(--bi-pink) 40%, 
+                        var(--bi-purple) 40%, 
+                        var(--bi-purple) 60%, 
+                        var(--bi-blue) 60%, 
+                        var(--bi-blue) 100%);"></div>
+                    <h3>Bisexual Flag</h3>
+                    <p>Pink represents attraction to the same gender, blue to different genders, and purple represents attraction to both.</p>
+                </div>
+                
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--pan-pink) 0%, 
+                        var(--pan-pink) 33.33%, 
+                        var(--pan-yellow) 33.33%, 
+                        var(--pan-yellow) 66.66%, 
+                        var(--pan-blue) 66.66%, 
+                        var(--pan-blue) 100%);"></div>
+                    <h3>Pansexual Flag</h3>
+                    <p>Pink represents attraction to women, yellow to non-binary people, and blue to men.</p>
+                </div>
+                
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--nonbinary-yellow) 0%, 
+                        var(--nonbinary-yellow) 25%, 
+                        var(--nonbinary-white) 25%, 
+                        var(--nonbinary-white) 50%, 
+                        var(--nonbinary-purple) 50%, 
+                        var(--nonbinary-purple) 75%, 
+                        var(--nonbinary-black) 75%, 
+                        var(--nonbinary-black) 100%);"></div>
+                    <h3>Non-Binary Flag</h3>
+                    <p>Yellow for those outside the gender binary, white for many genders, purple for those with mixed genders, black for agender.</p>
+                </div>
+
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--ace-black) 0%, 
+                        var(--ace-black) 25%, 
+                        var(--ace-gray) 25%, 
+                        var(--ace-gray) 50%, 
+                        var(--ace-white) 50%, 
+                        var(--ace-white) 75%, 
+                        var(--ace-purple) 75%, 
+                        var(--ace-purple) 100%);"></div>
+                    <h3>Asexual Flag</h3>
+                    <p>Black for asexuality, gray for gray-asexuality and demisexuality, white for non-asexual partners and allies, purple for community.</p>
+                </div>
+
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--lesbian-red) 0%, 
+                        var(--lesbian-red) 20%, 
+                        var(--lesbian-orange) 20%, 
+                        var(--lesbian-orange) 40%, 
+                        var(--lesbian-white) 40%, 
+                        var(--lesbian-white) 60%, 
+                        var(--lesbian-pink) 60%, 
+                        var(--lesbian-pink) 80%, 
+                        var(--lesbury-purple) 80%, 
+                        var(--lesbury-purple) 100%);"></div>
+                    <h3>Lesbian Flag</h3>
+                    <p>Represents the lesbian community with shades from dark orange to pink, with white in the center.</p>
+                </div>
+
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--genderqueer-purple) 0%, 
+                        var(--genderqueer-purple) 33.33%, 
+                        var(--genderqueer-white) 33.33%, 
+                        var(--genderqueer-white) 66.66%, 
+                        var(--genderqueer-green) 66.66%, 
+                        var(--genderqueer-green) 100%);"></div>
+                    <h3>Genderqueer Flag</h3>
+                    <p>Lavender for androgyny, white for agender identities, and green for those outside the binary.</p>
+                </div>
+
+                <div class="flag-item">
+                    <div class="flag-stripes" style="background: linear-gradient(180deg, 
+                        var(--intersex-yellow) 0%, 
+                        var(--intersex-yellow) 50%, 
+                        var(--intersex-purple) 50%, 
+                        var(--intersex-purple) 100%); 
+                        background-size: 100% 100%;
+                        background-position: center;
+                        background-repeat: no-repeat;"></div>
+                    <h3>Intersex Flag</h3>
+                    <p>Yellow and purple circle symbolize wholeness and completeness, and the right to be whoever and how we want to be.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="leader-section">
+            <h2>THE UPCOMING LGBTQ LEADER</h2>
+            <p>SFVAN GAY is emerging as a powerful voice and leader for the LGBTQ+ community in Wayanad and beyond. As the first openly transgender individual from the region, their journey represents hope, resilience, and the transformative power of living authentically.</p>
+            
+            <p>Through advocacy, community organizing, and personal example, SFVAN GAY is breaking down barriers and creating a more inclusive society where everyone can live with dignity and respect, regardless of their gender identity or sexual orientation.</p>
+            
+            <div class="quote">
+                "My mission is to create a world where no one has to hide who they are or whom they love. Authenticity is our greatest strength."
+            </div>
+            
+            <p>As an upcoming leader, SFVAN GAY focuses on education, healthcare access, legal rights, and creating safe spaces for LGBTQ+ individuals in Wayanad and throughout Kerala.</p>
+        </section>
+
+        <section class="mission-section">
+            <h2>Our Mission & Vision</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Love & Acceptance</h3>
+                    <p>Promoting love and acceptance for all gender identities and sexual orientations through education and community outreach.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Legal Rights</h3>
+                    <p>Advocating for equal rights, protection from discrimination, and legal recognition for transgender individuals.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Healthcare Access</h3>
+                    <p>Ensuring accessible, affordable, and respectful healthcare services for the LGBTQ+ community.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Building</h3>
+                    <p>Creating safe spaces and support networks for LGBTQ+ individuals in Wayanad and beyond.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="parade-section">
+            <h2>Celebrating Diversity</h2>
+            <p>Join us in celebrating the beautiful diversity of the LGBTQ+ community. Every color, every identity, every story matters.</p>
+            <div class="parade-content">
+                <div class="parade-flag" style="--i:0; background: linear-gradient(180deg, var(--rainbow-red) 0%, var(--rainbow-red) 16.66%, var(--rainbow-orange) 16.66%, var(--rainbow-orange) 33.33%, var(--rainbow-yellow) 33.33%, var(--rainbow-yellow) 50%, var(--rainbow-green) 50%, var(--rainbow-green) 66.66%, var(--rainbow-blue) 66.66%, var(--rainbow-blue) 83.33%, var(--rainbow-purple) 83.33%, var(--rainbow-purple) 100%);"></div>
+                <div class="parade-flag" style="--i:1; background: linear-gradient(180deg, var(--trans-blue) 0%, var(--trans-blue) 20%, var(--trans-pink) 20%, var(--trans-pink) 40%, var(--trans-white) 40%, var(--trans-white) 60%, var(--trans-pink) 60%, var(--trans-pink) 80%, var(--trans-blue) 80%, var(--trans-blue) 100%);"></div>
+                <div class="parade-flag" style="--i:2; background: linear-gradient(180deg, var(--bi-pink) 0%, var(--bi-pink) 40%, var(--bi-purple) 40%, var(--bi-purple) 60%, var(--bi-blue) 60%, var(--bi-blue) 100%);"></div>
+                <div class="parade-flag" style="--i:3; background: linear-gradient(180deg, var(--pan-pink) 0%, var(--pan-pink) 33.33%, var(--pan-yellow) 33.33%, var(--pan-yellow) 66.66%, var(--pan-blue) 66.66%, var(--pan-blue) 100%);"></div>
+                <div class="parade-flag" style="--i:4; background: linear-gradient(180deg, var(--nonbinary-yellow) 0%, var(--nonbinary-yellow) 25%, var(--nonbinary-white) 25%, var(--nonbinary-white) 50%, var(--nonbinary-purple) 50%, var(--nonbinary-purple) 75%, var(--nonbinary-black) 75%, var(--nonbinary-black) 100%);"></div>
+            </div>
+        </section>
+
         <section class="photo-gallery">
             <!-- Photo 1 -->
             <div class="photo-card">
-                <img src="https://ibb.co/DPdVMMVX" alt="SFVAN GAY - Pride and Identity" onerror="this.src='https://via.placeholder.com/400x300/667eea/ffffff?text=SFVAN+GAY+Image'">
+                <img src="https://i.ibb.co/0Qk4q0L/sfvan1.jpg" alt="SFVAN GAY - Pride and Identity" onerror="this.src='https://via.placeholder.com/400x300/667eea/ffffff?text=SFVAN+GAY+-+LGBTQ+Leader'">
                 <div class="photo-content">
                     <h3>Embracing True Identity</h3>
                     <p>SFVAN GAY represents the courage to live authentically in a society that often misunderstands transgender identities. Their journey symbolizes the universal LGBTQ+ struggle for self-acceptance and the right to express one's true gender identity without fear or shame.</p>
@@ -205,7 +668,7 @@
 
             <!-- Photo 2 -->
             <div class="photo-card">
-                <img src="https://ibb.co/Y70w1Cwv" alt="Transgender Resilience" onerror="this.src='https://via.placeholder.com/400x300/764ba2/ffffff?text=Transgender+Resilience'">
+                <img src="https://i.ibb.co/4T0y7J1/sfvan2.jpg" alt="Transgender Resilience" onerror="this.src='https://via.placeholder.com/400x300/764ba2/ffffff?text=Transgender+Resilience'">
                 <div class="photo-content">
                     <h3>Transgender Resilience</h3>
                     <p>The transgender community has historically faced immense challenges, from legal discrimination to social stigma. SFVAN GAY's presence in Wayanad marks a significant step toward visibility and acceptance for gender-diverse individuals in traditional societies.</p>
@@ -214,7 +677,7 @@
 
             <!-- Photo 3 -->
             <div class="photo-card">
-                <img src="https://ibb.co/PsThgjWY" alt="LGBTQ+ Community Strength" onerror="this.src='https://via.placeholder.com/400x300/e91e63/ffffff?text=LGBTQ+Community'">
+                <img src="https://i.ibb.co/6N7q3zR/sfvan3.jpg" alt="LGBTQ+ Community Strength" onerror="this.src='https://via.placeholder.com/400x300/e91e63/ffffff?text=LGBTQ+Community'">
                 <div class="photo-content">
                     <h3>Community Strength</h3>
                     <p>Gay and transgender individuals have always existed across cultures, often serving as spiritual leaders and cultural custodians. SFVAN GAY continues this legacy, reminding us that diversity in gender and sexuality is a natural part of human experience.</p>
@@ -223,7 +686,7 @@
 
             <!-- Photo 4 -->
             <div class="photo-card">
-                <img src="https://ibb.co/M5hKzdky" alt="Gender Expression Freedom" onerror="this.src='https://via.placeholder.com/400x300/ff6b6b/ffffff?text=Gender+Freedom'">
+                <img src="https://i.ibb.co/6N7q3zR/sfvan4.jpg" alt="Gender Expression Freedom" onerror="this.src='https://via.placeholder.com/400x300/ff6b6b/ffffff?text=Gender+Freedom'">
                 <div class="photo-content">
                     <h3>Freedom of Expression</h3>
                     <p>The right to express one's gender identity is fundamental to human dignity. SFVAN GAY's journey highlights the importance of creating safe spaces where LGBTQ+ individuals can express themselves without judgment or violence.</p>
@@ -232,7 +695,7 @@
 
             <!-- Photo 5 -->
             <div class="photo-card">
-                <img src="https://ibb.co/hJLwF9xQ" alt="Cultural Acceptance" onerror="this.src='https://via.placeholder.com/400x300/4ecdc4/ffffff?text=Cultural+Acceptance'">
+                <img src="https://i.ibb.co/6N7q3zR/sfvan5.jpg" alt="Cultural Acceptance" onerror="this.src='https://via.placeholder.com/400x300/4ecdc4/ffffff?text=Cultural+Acceptance'">
                 <div class="photo-content">
                     <h3>Cultural Transformation</h3>
                     <p>Throughout history, many cultures recognized third genders and diverse sexual orientations. SFVAN GAY's visibility helps reclaim this heritage and challenges modern binary thinking about gender and sexuality.</p>
@@ -241,37 +704,10 @@
 
             <!-- Photo 6 -->
             <div class="photo-card">
-                <img src="https://ibb.co/BMTqQCP" alt="Love and Equality" onerror="this.src='https://via.placeholder.com/400x300/45b7d1/ffffff?text=Love+is+Love'">
+                <img src="https://i.ibb.co/6N7q3zR/sfvan6.jpg" alt="Love and Equality" onerror="this.src='https://via.placeholder.com/400x300/45b7d1/ffffff?text=Love+is+Love'">
                 <div class="photo-content">
                     <h3>Love Without Boundaries</h3>
                     <p>The gay rights movement has always been about the fundamental right to love who you love. SFVAN GAY embodies this principle, demonstrating that transgender and gay individuals deserve equal rights to love, family, and community acceptance.</p>
-                </div>
-            </div>
-
-            <!-- Photo 7 -->
-            <div class="photo-card">
-                <img src="https://ibb.co/LX4CNwYt" alt="Transgender History" onerror="this.src='https://via.placeholder.com/400x300/96ceb4/ffffff?text=Trans+History'">
-                <div class="photo-content">
-                    <h3>Historical Significance</h3>
-                    <p>Transgender people have been part of human civilization for millennia, from ancient Roman emperors to Indian hijras. SFVAN GAY continues this rich history, bringing transgender visibility to Wayanad and inspiring future generations.</p>
-                </div>
-            </div>
-
-            <!-- Photo 8 -->
-            <div class="photo-card">
-                <img src="https://ibb.co/ZzL3pFf0" alt="LGBTQ+ Rights" onerror="this.src='https://via.placeholder.com/400x300/feca57/ffffff?text=LGBTQ+Rights'">
-                <div class="photo-content">
-                    <h3>Fighting for Rights</h3>
-                    <p>The struggle for LGBTQ+ rights continues worldwide. SFVAN GAY represents the ongoing battle for legal recognition, healthcare access, and protection from discrimination that transgender and gay individuals face daily.</p>
-                </div>
-            </div>
-
-            <!-- Photo 9 -->
-            <div class="photo-card">
-                <img src="https://ibb.co/zWqmtfr2" alt="Pride and Celebration" onerror="this.src='https://via.placeholder.com/400x300/ff9ff3/ffffff?text=Pride+Celebration'">
-                <div class="photo-content">
-                    <h3>Celebrating Diversity</h3>
-                    <p>Pride is both a celebration and a protest. SFVAN GAY's presence celebrates the diversity of human gender and sexuality while protesting the discrimination that still affects LGBTQ+ communities globally.</p>
                 </div>
             </div>
         </section>
@@ -308,13 +744,18 @@
             <div class="pride-flag"></div>
             <p>Celebrating Diversity • Honoring Courage • Building Inclusive Communities</p>
             <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             <p>&copy; 2024 SFVAN GAY. All rights reserved.</p>
         </div>
     </footer>
+
+    <div class="floating-heart">
+        <i class="fas fa-heart"></i>
+    </div>
 
     <script>
         // Simple image error handling
@@ -322,9 +763,14 @@
             const images = document.querySelectorAll('img');
             images.forEach(img => {
                 img.addEventListener('error', function() {
-                    this.src = 'https://via.placeholder.com/400x300/667eea/ffffff?text=SFVAN+GAY';
+                    this.src = 'https://via.placeholder.com/400x300/667eea/ffffff?text=SFVAN+GAY+-+LGBTQ+Leader';
                     this.alt = 'SFVAN GAY - Transgender Pioneer';
                 });
+            });
+
+            // Add loading="lazy" for better performance
+            images.forEach(img => {
+                img.setAttribute('loading', 'lazy');
             });
         });
     </script>
